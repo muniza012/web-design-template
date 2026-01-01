@@ -1,0 +1,119 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+/* //////////// header starts  */
+nav{
+  display: none;
+}
+
+.container{
+ width: 100%; 
+  
+  margin: 0 auto; 
+  
+}
+
+
+
+header{
+  width: 100%;
+  height: 80px;
+  display: flex;
+justify-content: space-between;
+align-items: center;
+font-size: 1.6em;
+padding: 0 1em;
+background-color: black;
+color: white;
+position: fixed;
+z-index: 1000;
+isolation: isolate;
+}
+
+header .logo{
+text-decoration: none;
+color: white;
+ font-size: 1.3em;
+}
+
+header .logo span{
+  color: orange;
+  font-size: 1.3em;
+}
+/* //////////// header ends  */
+
+
+/* ////// homepage start */
+.home{
+  padding: 0 1em;
+ background: url('assets/main.jpg') no-repeat center / cover;
+ padding-top: 90px;
+ padding-bottom: 1em;
+ width: 100%;
+ color: white;
+}
+
+
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+width: 50%;
+line-height: 1.5;
+}
+
+.content h1{
+  font-size: 2.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.content h1 span{
+  display: block;
+  color: grey;
+    text-transform: uppercase;
+    
+}
+
+.btns{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.btn{
+padding: 0.5em 2em;
+margin-top: 0.8em;
+font-size: 1.1em;
+
+border-radius: 5px;
+}
+
+ .btns .btn-download{
+  background-color: transparent;
+  border: 1px solid orange;
+  transition: all 0.5s ease;
+  color: orange;
+ }
+
+ .btns .btn-download:hover{
+  color: white;
+  background-color: orange;
+  cursor: pointer;
+ }
+ .btns .btn-discover{
+  background-color: orange;
+  border: none;
+  color: white;
+   transition: all 0.5s ease;
+ }
+
+  .btns .btn-discover:hover{
+   box-shadow: rgba(255, 165, 0, 0.2) 0px 7px 29px 0px;
+    cursor: pointer;
+  }
+
+/* ////// homepage ends */

@@ -1,9 +1,13 @@
+html{
+  scroll-behavior: smooth;
+}
+
 *{
 margin: 0;
 padding: 0;
 box-sizing: border-box;
 font-family: Arial, Helvetica, sans-serif;
-scroll-behavior: auto;
+
 }
 /* //////////// header starts  */
 nav{
@@ -21,17 +25,48 @@ nav{
 
 header{
   width: 100%;
-  height: 80px;
+  max-width: 1600px;
+  min-height: 80px;
   display: flex;
 justify-content: space-between;
 align-items: center;
-font-size: 1.6em;
+font-size: 1em;
 padding: 0 1em;
 background-color: black;
 color: white;
 position: fixed;
 z-index: 1000;
 isolation: isolate;
+}
+
+.menu .fa-bars{
+  display: block;
+}
+
+.menu nav {
+  display: none;
+}
+.menu nav ul{
+ 
+  color: white;
+  list-style: none;
+  
+}
+.menu nav ul a{
+text-decoration: none;
+ color: white;
+ font-size: 0.5em;
+}
+.menu nav ul a:hover{
+  color: orange;
+}
+
+.menu:hover nav {
+  display: block;
+}
+
+.menu:hover .fa-bars {
+  display: none;
 }
 
 header .logo{
@@ -71,7 +106,7 @@ gap: 10px;
 }
 
 .content h1{
-  font-size: 2.2em;
+  font-size: 2em;
   text-transform: uppercase;
   font-weight: 600;
 }
@@ -96,27 +131,34 @@ font-size: 1.1em;
 
 border-radius: 5px;
 }
+.send-message-btn{
+padding: 0.8em 2em;
+margin-top: 0.8em;
+font-size: 0.8em;
 
- .btns .btn-download{
+border-radius: 5px;
+}
+
+ .btn-download,.send-message{
   background-color: transparent;
   border: 1px solid orange;
   transition: all 0.5s ease;
   color: orange;
  }
 
- .btns .btn-download:hover{
+ .btn-download:hover, .send-message:hover{
   color: white;
   background-color: orange;
   cursor: pointer;
  }
- .btns .btn-discover,.number-count .btn-discover{
+ .btn-discover{
   background-color: orange;
   border: none;
   color: white;
    transition: all 0.5s ease;
  }
 
-  .btns .btn-discover:hover,.number-count .btn-discover:hover{
+   .btn-discover:hover{
    box-shadow: rgba(255, 165, 0, 0.2) 0px 7px 29px 0px;
     cursor: pointer;
   }
@@ -204,12 +246,14 @@ flex-direction: column;
 .number-count{
 background-attachment: fixed;
 background-image: url('assets/back1.avif');
-height: 300px;
+min-height: 300px;
 padding-bottom: 32px;
 text-align: center;
 background-position-x:50%;
 background-position-y:50%;
 padding-top: 32px;
+padding-left: 1em;
+padding-right: 1em;
 }
 .number-count h2{
   text-align: center;
@@ -247,6 +291,8 @@ gap: 15px;}
 
 .para{
   min-height: 400px;
+  padding-left: 1em;
+  padding-right: 1em;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -259,7 +305,7 @@ gap: 15px;}
 
 /* gallery section starts */
 .gallery{
-height: 100vh;
+min-height: 100vh;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -268,16 +314,154 @@ padding-top: 100px;
 }
 .hexagon{
 width: 140px;
-height: 300px;
+height: 200px;
 margin: 10px;
 overflow: hidden;
 object-fit: cover;
   clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
 }
+
 .gallery img{
   width: 140px;
-  height: 300px;
+  height: 200px;
 
 }
 
 /* gallery section ends */
+
+/*contact*/
+.contactParent{
+background: url("assets/main.jpg") no-repeat center / cover scroll;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.contact{
+  display: grid;
+grid-template-columns: ifr;
+  align-items: center;
+  min-height: 600px;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding: 32px;
+background-color: black;
+color: white;
+}
+form input , form textarea{
+  border: none;
+  border-bottom: 1px solid grey;
+  color: grey;
+  padding: 8px 15px;
+  margin-bottom: 5px;
+  background-color: transparent;
+  width: 100%;
+}
+.contact-us{
+ background-color: white;
+  color: black;
+  padding: 32px;
+}
+.contact-us span{
+font-size: 1.1em;
+font-weight: 600;
+text-transform: uppercase;
+padding-bottom: 15px;
+}
+.contact-us p {
+  padding-top: 10px;
+padding-bottom: 15px;
+
+}
+.data{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap:10%;
+}
+.data-items{
+  display: flex;
+  padding: 5px ;
+  align-items: baseline;
+}
+.follow-us,.follow{
+  min-height: 40vh;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2em 1em;
+}
+.follow-us a{
+  color: white;
+  text-decoration: none;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+.contact-items,.follow-items{
+display: flex;
+flex-direction: column;
+gap: 10%;
+}
+
+.container{
+  max-width: 1600px;
+}
+
+@media (min-width:768px){
+.home{
+     flex-direction: row;
+     gap: 10px;
+}
+
+
+.content{
+  width: 50%;
+}
+.image{
+  width: 50%;
+}
+
+
+  .wrapper{
+    flex-direction: row;
+     gap: 40px;
+  }
+  .wrapper .contents{
+    width: 50%;
+  }
+ .btns {
+  
+    gap: 15px;
+  }
+  .gallery .hexagon-parent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+.menu .fa-bars{
+  display: none;
+}
+.menu nav{
+  display: flex;
+ flex-direction: row;
+  gap: 10px;
+    font-size: 2em;
+}
+ .menu nav ul {
+    display: flex;
+    gap: 20px;
+  
+  }
+header .logo{
+  font-size: 2.2em;
+}
+}

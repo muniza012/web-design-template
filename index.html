@@ -23,15 +23,18 @@
       <!-- //////////// header starts -->
       <header>
         <a class="logo" href="#">gadget<span>Groove</span></a>
-        <i class="fa-solid fa-bars"></i>
-        <nav>
-          <ul class="nav-links">
-            <li><a href="">HOME</a></li>
-            <li><a href="">ABOUT</a></li>
-            <li><a href="">GALLERY</a></li>
-            <li><a href="">CONTACT</a></li>
-          </ul>
-        </nav>
+         <div class="menu">
+    <i class="fa-solid fa-bars"></i>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#gallery">GALLERY</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </nav>
+  </div>
       </header>
       <!-- //////////// header ends -->
 
@@ -62,7 +65,7 @@
       <!-- //////////// homepage ends-->
 
       <!--about1 starts-->
-      <section class="about1">
+      <section class="about1" id="about">
         <h2>
           debitis,
           <span> ipsum</span>
@@ -216,9 +219,10 @@
       <!--number-count ends-->
 
       <!--gallery section starts-->
-<section class="gallery">
+<section class="gallery" id="gallery">
 <h2>GALLERY</h2>
-<div class="hexagon">
+<div class="hexagon-parent">
+  <div class="hexagon">
   <img src="assets/gallery1.jpg" alt="gallery1">
 </div>
 <div class="hexagon">
@@ -233,16 +237,72 @@
 <div class="hexagon">
   <img src="assets/gallery7.jpg" alt="gallery1">
 </div>
-
-
-
+</div>
 </section>
+<!--gallery section ends-->
 
+<div class="contactParent">
+<div class="contact" id="contact">
+  <form action="">
+  <h2>
+    SEND US A MESSAGE
+  </h2>
+  <input type="text" placeholder="Name" required>
+  <input type="email" placeholder="Email" required>
+  <input type="text" placeholder="Subjext" required>
+  <textarea name="" id="" placeholder="Message" required cols="20" rows="10" ></textarea>
+  <button class="send-message send-message-btn">Send message</button>
+</form>
+<div class="contact-us" >
+<span>
+    contact us
+  </span>
+  <p>Lorem ipsum dolor sit amet.</p>
+<div class="data">
+  <div class="data-items">
+<i class="fa-solid fa-location-dot"></i>
+    <p><b>Address:</b> 198West 21th Street , Suite 721 New York 88787</p>
+  </div>
+    <div class="data-items">
+<i class="fa-solid fa-phone"></i>
+    <p><b>Phone:</b> 090090966</p>
+  </div>
+</div>
+  <div class="data-items">
+<i class="fa-solid fa-reply-all"></i>
+    <p><b>Email:</b>abc@gmail.com</p>
+  </div>
+    <div class="data-items">
+<i class="fa-solid fa-globe"></i>
+    <p><b>website:</b> www.abc.com</p>
+  </div>
+</div>
 
 
 </div>
+</div>
+<div class="follow-us">
+<div class="contact-info">
+<h3>Contact info</h3>
+<div class="contact-items">
+  <a href="#"><i class="fas fa-phone"></i> +92-1344565</a>
+<a href="#"><i class="fas fa-envelope"></i> avc@gmail.com</a>
+<a href="#"><i class="fas fa-map-marker-alt"></i> karachi, Pakistan - 71500</a>
 
-         <!--gallery section ends-->
+</div>
+</div>
+  <div class="follow">
+<h3>Follow us</h3>
+<div class="follow-items">
+  <a href="#"><i class="fab fa-facebook-f"></i>facebook</a>
+<a href="#"><i class="fab fa-linkedin"></i>linkedin</a>
+<a href="#"><i class="fab fa-twitter"></i>twitter</a>
+  </div>
+</div>
+</div>
+</div>
+
+         
     </div>
   </body>
 </html>
